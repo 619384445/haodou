@@ -1,29 +1,19 @@
 # haodou
 
-## Project setup
-```
-npm install
-```
+## 好豆美食
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+###技术要点
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1.vuex 状态管理
+2.vue-router 路由
+3.keep-alive
+4.swiper
+5.better-scroll
+6.图片的懒加载
+7.路由的懒加载
+8.移动端事件 vue-touch
+9.minit-ui
+10.封装js组件
+11.封装UI组件
+12.sass
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
