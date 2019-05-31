@@ -10,8 +10,11 @@ module.exports = {
     // configureWebpack:{
     //     resolve:{
     //         alias:{
-    //             "@":resolve(__dirname,"./src"),
-    //             "@common":resolve(__dirname,"./src/common")
+    //             "@":path.resolve(__dirname,"./src"),
+    //             "@api":path.resolve(__dirname,"./src/api"),
+    //             "@components":path.resolve(__dirname,"./src/components"),
+    //             "@ro":path.resolve(__dirname,"./src/common"),
+    //             "@common":path.resolve(__dirname,"./src/common"),
     //         }
     //     }
     // }
