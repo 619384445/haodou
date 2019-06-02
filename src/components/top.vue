@@ -1,9 +1,8 @@
 <template>
-
             <div class="head">
             <ul>
-              <li class="headAct">精选</li>
-              <li>新味道</li>
+              <router-link tag="li" to="/choiceness" >精选</router-link>
+              <router-link tag="li" to="/newproduct" >新味道</router-link>
             </ul>
           </div>
     
@@ -27,8 +26,11 @@ export default {
           height: .3rem;
           background: #fff;
           overflow: hidden;
+          position:fixed;
+          width:100%;
+          z-index: 1000;
       }
-      .headAct{
+      .router-link-active{
         color:#ff7d01;
         font-weight:700;
       }

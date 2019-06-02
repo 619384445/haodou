@@ -12,6 +12,7 @@ export default {
 
 <style scoped>
 .showImg img{
+        margin-top:0.05rem;
         width: 100%;
         height: 1rem;
         border-radius: 0.05rem;

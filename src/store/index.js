@@ -1,36 +1,65 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {http} from '@/utils/http'
+import axios from 'axios'
+import {getIndex} from '@/api'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+      indexShow:JSON.parse(sessionStorage.getItem("indexShow"))||[],
+      indexFood:JSON.parse(sessionStorage.getItem("indexFood"))||[],
+      users:JSON.parse(sessionStorage.getItem("users"))||[]
+     
   },
   mutations: {
-
-  },
+      mutGetIndex(state,parameter){
+          state.indexShow=parameter;
+          sessionStorage.setItem("indexShow",JSON.stringify(state.indexShow)); 
+ },
+      mutGetFood(state,parameter){
+        state.indexFood=parameter;
+        sessionStorage.setItem("indexFood",JSON.stringify(state.indexFood));
+ },
+       mutGetUsers(state,parameter){
+        state.users=parameter;
+        sessionStorage.setItem("users",JSON.stringify(state.users));
+        console.log(parameter);
+       }
+},
   actions: {
-        actGet(){
-          http({
-            method:"post",
-            url:"/hop/router/rest.json",
-            data:{
-               id: "5cb041e68ee0ad30421354e2",
-                 _HOP_: {"version":"1.0.0","action":"front.page.get","secret_id":"5722f877e4b0d4512e3fd872","current_time":1559046392,"sign":"eccfd8efe3f8fe34eb8eefd0847ea59a"},
-                 from: "mvue",
-                 adcode: 100000,
-                 appid: 3,
-                 uid: 138453460,
-                 uuid: "051B99E1CD3DC1CCDFB1559043172157",
-                 hduid: 138453460,
-                 vc: 170,
-                 vn: "1.0.0"            
-            }
-        }).then((res)=>{
-            console.log(res);
+       async actGetIndex({commit},parameter){
+          let data= await getIndex(parameter);
+          commit('mutGetIndex',data.data.dataset);
+         
+        },
+        actGetFood({commit}){
+          axios({
+              method:"get",
+              url:"http://localhost:3000/foods"
+          }).
+          then((res)=>{
+              res.data.map((item)=>{
+                  item.flag = true;
+              })
+              commit("mutGetFood",res.data);
+              
+          })
+      },
+      actGetUsers({commit}){
+        axios({
+            method:"get",
+            url:"http://localhost:3000/users"
+        }).
+        then((res)=>{
+            res.data.map((item)=>{
+                item.flag = true;
+            })
+            commit("mutGetUsers",res.data);
+            
         })
-        }
+    }
+
+
   }
 })

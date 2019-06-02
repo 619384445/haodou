@@ -2,9 +2,9 @@ import axios from "axios";
 
 export const http = axios.create({
    // baseUrl:"xxxxx"
-   timeout:5000
-})
+   timeout:5000,
 
+})
 
 //请求拦截
 http.interceptors.request.use((config)=>{
@@ -32,6 +32,14 @@ http.interceptors.response.use((res)=>{
     return Promise.reject(e);
 })
 
+
+export const post=(mentod,url,data={})=>{
+    if(mentod =="post"){
+        return http.post(url,data);
+    }else{
+        retuen ;
+    }
+}
 
 
 
