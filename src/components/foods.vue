@@ -25,8 +25,11 @@
 </template>
 
 <script>
+import { create } from 'domain';
 export default {
-props:["indexFood"]
+  props:["indexFood"]
+
+
 }
 </script>
 

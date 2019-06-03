@@ -3,7 +3,7 @@
         {
             "id":0,
             "foodName":"辣炒猪肝",
-            "difficulty ":"中等",
+            "difficulty":"中等",
             "materials":"猪肝 适量，红辣椒40克 青辣椒",
             "star":4,
             "collect":4,
@@ -14,7 +14,7 @@
         {
             "id":1,
             "foodName":"香菇滑鸡",
-            "difficulty ":"中等",
+            "difficulty":"中等",
             "materials":"青辣椒 适量，红辣椒适量 香菇",
             "star":4,
             "collect":10,
@@ -26,7 +26,7 @@
         {
             "id":2,
             "foodName":"鸡肉炒面",
-            "difficulty ":"中等",
+            "difficulty":"中等",
             "materials":"面条 适量，鸡腿，红肠 ",
             "star":4,
             "collect":4,
@@ -37,7 +37,7 @@
         {
             "id":3,
             "foodName":"红烧猪蹄",
-            "difficulty ":"简单",
+            "difficulty":"简单",
             "materials":"猪前蹄500克",
             "star":4,
             "collect":749,
@@ -48,7 +48,7 @@
         {
             "id":4,
             "foodName":"红烧鮸鱼",
-            "difficulty ":"简单",
+            "difficulty":"简单",
             "materials":"鮸鱼 ",
             "star":4,
             "collect":0,
@@ -59,7 +59,7 @@
         {
             "id":5,
             "foodName":"酱烧小黄鱼",
-            "difficulty ":"中等",
+            "difficulty":"中等",
             "materials":"小黄鱼 2条，姜15克，葱2颗 ",
             "star":4,
             "collect":588,
@@ -70,7 +70,7 @@
         {
             "id":6,
             "foodName":"泡椒鸡爪",
-            "difficulty ":"中等",
+            "difficulty":"中等",
             "materials":"鸡爪5斤，柠檬6个，黄瓜4根",
             "star":4,
             "collect":2,
@@ -81,7 +81,7 @@
         {
             "id":7,
             "foodName":"麦片粥",
-            "difficulty ":"简单",
+            "difficulty":"简单",
             "materials":"麦片",
             "star":3,
             "collect":0,
@@ -131,6 +131,126 @@
         {
             "avatar":"http://res1.hoto.cn/009905d259633f0df444eb88.jpg!w100w",
             "name": "做梦美食家"
+        }
+    ],
+    "menu":[
+        {
+            "brief": "提起糕点，大家会不约而同的想起烤箱，难道甜蜜好吃的糕点只能使用烤箱做出来吗？答案非也。这里小编想住在宿舍里的学生介绍30款不需要烤箱的糕点，在宿舍里的学生即使没有烤箱也可以轻松制作，可以尽情享受DIY的乐趣。",
+            "cntComment": 22,
+            "cntFavorite": 3582,
+            "count": 30,
+            "title": "不用烤箱，在宿舍里简单做糕点",
+            "dataset":[
+                {"cover": "https://res1.hoto.cn/03066ffa59633f0df444eb88.jpg!default",
+                "title": "微波炉蛋糕"
+                },
+                {
+                   "cover":"https://res1.hoto.cn/02ffe61959633f0df444eb88.jpg!default",
+                   "title":"海绵蛋糕"
+                },
+                {
+                    "cover": "https://res1.hoto.cn/0307aecd59633f0df444eb88.jpg!default",
+                    "title":"微波之蜂蜜玉米蛋糕"
+                 },
+                 {
+                    "cover": "https://res1.hoto.cn/02f2570e59633f0df444eb88.jpg!default",
+                    "title":"微波炉做发糕"
+                 },
+                 {
+                    "cover": "https://res1.hoto.cn/03159ca159633f0df444eb88.jpg!default",
+                    "title":"自制电饭锅蛋糕"
+                 }
+            ],
+            "user":{
+                "avatar": "http://res1.hoto.cn/00699dac59633f0df444eb88.jpg!w100w",
+                "name": "幻月飘雪"
+            }
+        },
+        {
+            "brief":  "大部分都是每100g不到100卡路里  追求食物原味  采用最简单的手法   适合各路口味偏轻的妹子的  轻盈快手家常菜     ↵↵题外话——正在减肥的人应当树立一个健康的心态  不要一味的隐忍节食  这样往往会造成暴食等问题  想吃什么就去吃  想喝什么就去喝  但是只吃自己爱吃的东西  只吃自己想吃的东西  你要记得做到每一个入口的东西都能让自己感到快乐  都能让自己更加健康  而不是为了吃而吃  细嚼慢咽  感受美食的带来的幸福  ↖(^ω^)↗",
+            "cntComment": 20,
+            "cntFavorite": 1582,
+            "count": 10,
+            "title": "每100g不到100卡的轻盈快手小家常",
+            "dataset":[
+                {"cover": "https://res1.hoto.cn/02f6722659633f0df444eb88.jpg!default",
+                "title": "蒜泥手撕茄子"
+                },
+                {"cover": "https://res1.hoto.cn/02fd6ab359633f0df444eb88.jpg!default",
+                    "title": "蒜泥手撕茄子"
+                    },
+                    {"cover":"https://res1.hoto.cn/0303f83759633f0df444eb88.jpg!default",
+                        "title": "水蒸蛋"
+                        },
+                        {"cover": "http://recipe1.hoto.cn/pic/recipe/l/63/bb/310115_016c9c.jpg",
+                            "title": "芒果糯米饭"
+                            },
+                            {"cover":  "https://res1.hoto.cn/030ecb8259633f0df444eb88.jpg!default",
+                                "title": "梅子茶泡饭"
+                                }
+            ],
+            "user":{
+                "avatar": "http://res1.hoto.cn/00803cf759633f0df444eb88.jpg!w100w",
+                "name": "花刺"
+            }
+        },
+        {
+            "brief":  "唐诗有云：“胡麻好种无人种，正是归时又不归。”说的就是中药当归。李时珍在《本草纲目》中记录了这么一个故事：古人取妻为嗣续也，当归调血为女人要药，有恩夫之意，故有当归之名。",
+            "cntComment": 13,
+            "cntFavorite": 3142,
+            "count": 16,
+            "title": "女性必吃 补血调经话当归",
+            "dataset":[
+                {"cover": "https://res1.hoto.cn/02f3ca3d59633f0df444eb88.jpg!default",
+                "title": "当归乌鸡汤"
+                },
+                {"cover": "https://res1.hoto.cn/030c19c359633f0df444eb88.jpg!default",
+                    "title": "红枣当归桂圆煮蛋"
+                    },
+                    {"cover": "https://res1.hoto.cn/031022d059633f0df444eb88.jpg!default",
+                        "title": "当归粥"
+                        },
+                        {"cover": "https://res1.hoto.cn/0308e19059633f0df444eb88.jpg!default",
+                            "title":"福建沙县炖罐--炖盅当归鸭"
+                            },
+                            {"cover":"https://res1.hoto.cn/0302c12659633f0df444eb88.jpg!default",
+                                "title":"当归党参蜜枣火腿鸡汤"
+                                }
+            ],
+            "user":{
+                "avatar": "http://res.hoto.cn/5ab09d820135db27dd2746c3.jpg!default",
+                "name": "冷月无声abcd"
+            }
+            
+        },
+        {
+            "brief": "这些菜虽然名字普通，但却有着飘遍了街头巷尾的味，每次一闻到这些味道，脑子第一个念头就是冲回家端着一碗米饭，配着它来大吃特吃，没吃到!可别哭哦！",
+            "cntComment": 131,
+            "cntFavorite": 6142,
+            "count": 56,
+            "title": "飘遍街头巷尾的美味",
+            "dataset":[
+                {"cover":"https://res1.hoto.cn/0311937b59633f0df444eb88.jpg!default",
+                "title": "炸土豆片"
+                },
+                {"cover": "https://res1.hoto.cn/030cec6359633f0df444eb88.jpg!w580",
+                    "title": "梅子蒸排骨"
+                    },
+                    {"cover": "https://res1.hoto.cn/02ff1e4a59633f0df444eb88.jpg!default",
+                        "title": "干锅牛蛙"
+                        },
+                        {"cover": "https://res1.hoto.cn/031680d859633f0df444eb88.jpg!default",
+                            "title": "青椒回锅肉"
+                            },
+                            {"cover":"https://res1.hoto.cn/02fc5e3759633f0df444eb88.jpg!w580",
+                                "title": "麻婆茄子"
+                                }
+            ],
+            "user":{
+                "avatar": "http://res1.hoto.cn/0088be2659633f0df444eb88.jpg!w100w",
+                "name": "糖飞鱼"
+            }
+            
         }
     ]
 }

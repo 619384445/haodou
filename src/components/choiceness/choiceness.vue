@@ -1,6 +1,6 @@
 <template>
     <div class="choiceness">
-        <showImg></showImg>
+        <showImg :indexShow="indexShow[0].dataset"></showImg>
            <div class="nav">
              <div v-for="item in indexShow[1].dataset">
                 <img :src="item.img">
@@ -9,11 +9,13 @@
           </div>
 
             <div class="navList-wrap">
-                  <div class="navList" >
-                        <div v-for="item in indexShow[2].dataset">
-                           <img :src="item.img">
-                        </div>
-                  </div>
+                  <BScroll>
+                    <div class="navList" >
+                          <div v-for="item in indexShow[2].dataset">
+                            <img :src="item.img">
+                          </div>
+                    </div>
+                  </BScroll>
             </div>
 
             <foods :indexFood="indexFood"></foods>
@@ -39,7 +41,6 @@ export default {
     vn: "1.0.0"  });
   this.actFood();
 
-   
   },
 components:{
     showImg,
@@ -90,7 +91,7 @@ components:{
      }
      .navList{
        position: absolute;
-       width:600%;
+       width:max-content;
      }
      .navList div{
        margin-right: 0.1rem;

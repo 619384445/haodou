@@ -6,6 +6,8 @@
                 <ul>
                   <router-link tag="li" to="/choiceness" >精选</router-link>
                   <router-link tag="li" to="/newproduct" >新味道</router-link>
+                  <router-link tag="li" to="/menu" >菜单</router-link>
+                  <router-link tag="li" to="/kitchen" >厨房宝典</router-link>
                   
                 </ul>
             </BScroll>

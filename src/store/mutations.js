@@ -1,0 +1,22 @@
+export default {
+    mutGetIndex(state,parameter){
+        state.indexShow=parameter;
+        sessionStorage.setItem("indexShow",JSON.stringify(state.indexShow)); 
+},
+    mutGetFood(state,parameter){
+      state.indexFood=parameter;
+      sessionStorage.setItem("indexFood",JSON.stringify(state.indexFood));
+},
+     mutGetUsers(state,parameter){
+      state.users=parameter;
+      sessionStorage.setItem("users",JSON.stringify(state.users));
+     },
+     mutKitchen(state,parameter){
+      state.kitchen=parameter;
+      sessionStorage.setItem("kitchen",JSON.stringify(state.kitchen));
+     },
+     mutMenu(state,parameter){
+        state.menu=parameter;
+        sessionStorage.setItem("menu",JSON.stringify(state.menu));
+       }
+}

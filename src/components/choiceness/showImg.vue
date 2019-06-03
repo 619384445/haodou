@@ -1,22 +1,51 @@
 <template>
-    <div class="showImg">
-              <img src="http://res.hoto.cn/5ccec8d40135db3ab01e8dc8.png!defaultp">
-    </div>
+   
+              <div class="swiper-container showImg">
+                    <div class="swiper-wrapper ul">
+                        <div class="swiper-slide" v-for="item in indexShow">
+                             <img :src="item.cover">
+                        </div>
+                    </div>
+              </div>   
+     
 </template>
 
 <script>
+import Swiper from 'swiper';
 export default {
-
+ props:["indexShow"],
+  mounted(){
+     new Swiper ('.swiper-container', {
+     loop: true,
+      autoplay:true
+  },
+  console.log(this.indexShow)
+  )        
+  }
 }
 </script>
 
 <style scoped>
+.showImg{
+    position: relative;
+    overflow: hidden;
+    height: 1rem;
+    width: 100%;
+}
+.showImg .ul{
+ position:absolute;
+ height: 1rem;
+ display: flex;
+ flex-wrap: nowrap;
+}
+
 .showImg img{
         margin-top:0.05rem;
         width: 100%;
         height: 1rem;
         border-radius: 0.05rem;
      }
+     
 </style>
 
 

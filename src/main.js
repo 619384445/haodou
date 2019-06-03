@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './routers'
 import store from './store'
 import BScroll from "@/components/BScroll"
-
+import 'swiper/dist/css/swiper.css'
 Vue.component('BScroll',BScroll)
 
 
