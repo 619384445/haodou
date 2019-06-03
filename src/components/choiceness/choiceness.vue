@@ -25,7 +25,7 @@ import showImg from '@/components/choiceness/showImg'
 import foods from '@/components/foods'
 import Vuex from 'vuex'
 export default {
-  created(){
+  activated(){
     this.actGet({ 
     id: "5cb041e68ee0ad30421354e2",
     _HOP_: {"version":"1.0.0","action":"front.page.get","secret_id":"5722f877e4b0d4512e3fd872","current_time":1559046392,"sign":"eccfd8efe3f8fe34eb8eefd0847ea59a"},

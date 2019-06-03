@@ -1,9 +1,15 @@
 <template>
+
             <div class="head">
-            <ul>
-              <router-link tag="li" to="/choiceness" >精选</router-link>
-              <router-link tag="li" to="/newproduct" >新味道</router-link>
-            </ul>
+
+            <BScroll>
+                <ul>
+                  <router-link tag="li" to="/choiceness" >精选</router-link>
+                  <router-link tag="li" to="/newproduct" >新味道</router-link>
+                  
+                </ul>
+            </BScroll>
+            
           </div>
     
 </template>
@@ -37,6 +43,9 @@ export default {
       .head ul li{
          float: left;
          padding: .05rem 0.1rem ;
+      }
+      .head ul{
+        width:max-content;
       }
 </style>
 

@@ -1,12 +1,14 @@
 <template>
      <div class="recommend">
                   <div class="users">
+                      <BScroll>
                             <ul>
                                 <li v-for="item in users">
                                   <div><img :src="item.avatar" alt=""></div>
                                   <p>{{item.name}}</p>
                                 </li>
                             </ul>
+                      </BScroll>
                       </div>  
                   <foods :indexFood="indexFood"></foods>
             </div>
@@ -48,15 +50,15 @@ components:{
      }
    
      .users ul {
-     display:flex;
-     flex-wrap: nowrap;
-     width:max-content;
+     width: max-content;
      }
+
      .users ul li{
+         float: left;
         width: 0.6rem;
      }
      .users ul li p{
-         width: 0.45rem;
+      width: 0.45rem;
       float: left;
       text-align: center;
       width:100%;

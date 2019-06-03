@@ -2,6 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './routers'
 import store from './store'
+import BScroll from "@/components/BScroll"
+
+Vue.component('BScroll',BScroll)
+
 
 Vue.config.productionTip = false
 
