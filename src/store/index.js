@@ -12,7 +12,8 @@ export default new Vuex.Store({
       indexFood:JSON.parse(sessionStorage.getItem("indexFood"))||[],
       users:JSON.parse(sessionStorage.getItem("users"))||[],
       kitchen:JSON.parse(sessionStorage.getItem("kitchen"))||[],
-      menu:JSON.parse(sessionStorage.getItem("menu"))||[]
+      menu:JSON.parse(sessionStorage.getItem("menu"))||[],
+      serch:null
 
       
   },

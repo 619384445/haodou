@@ -17,9 +17,8 @@ export default {
   mounted(){
      new Swiper ('.swiper-container', {
      loop: true,
-      autoplay:true
-  },
-  console.log(this.indexShow)
+     autoplay:true
+  }
   )        
   }
 }

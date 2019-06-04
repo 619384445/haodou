@@ -4,6 +4,9 @@ import router from './routers'
 import store from './store'
 import BScroll from "@/components/BScroll"
 import 'swiper/dist/css/swiper.css'
+import VueTouch from 'vue-touch'
+
+Vue.use(VueTouch, {name: 'v-touch'})
 Vue.component('BScroll',BScroll)
 
 

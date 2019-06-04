@@ -10,6 +10,11 @@ export default {
              let data= await getIndex(parameter);
              commit('mutKitchen',data.data.dataset);
            },
+    async actSerch({commit},parameter){
+             let data= await getIndex(parameter);
+             commit('mutSerch',data.data.dataset);
+             console.log(data.data.dataset)
+           },
       actGetFood({commit}){
         axios({
             method:"get",

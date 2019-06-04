@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import choiceness from "@/components/choiceness/choiceness"
-import newproduct from "@/components/newproduct/newproduct"
-import kitchen from "@/components/kitchen/kitchen"
-import menu from "@/components/menu/menu"
+
+
 
 Vue.use(Router)
 
@@ -18,26 +16,47 @@ export default new Router({
       props:true,
       path: '/choiceness',
       name: 'choiceness',
-      component: choiceness
+      component:resolve => require(['@/components/choiceness/choiceness'],resolve),
+      meta:{
+        sFlag:false
+      }
       
     },
     {
       props:true,
       path: '/newproduct',
       name: 'newproduct',
-      component: newproduct
+      component:resolve => require(['@/components/newproduct/newproduct'],resolve),
+      meta:{
+        sFlag:false
+      }
     },
     {
       props:true,
       path: '/kitchen',
       name: 'kitchen',
-      component: kitchen
+      component: resolve => require(['@/components/kitchen/kitchen'],resolve),
+      meta:{
+        sFlag:false
+      }
     },
     {
       props:true,
       path: '/menu',
       name: 'menu',
-      component: menu
+      component: resolve => require(['@/components/menu/menu'],resolve),
+      meta:{
+        sFlag:false
+      }
+    },
+    {
+      props:true,
+      path: '/serch',
+      name: 'serch',
+      component:resolve => require(['@/components/serch/serch'],resolve),
+      meta:{
+        sFlag:true
+      }
     }
 ]
 })

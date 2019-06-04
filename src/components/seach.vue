@@ -1,6 +1,6 @@
 <template>
           <div class="seach">
-            <button >搜索美食/菜单/用户</button>
+            <router-link to="/serch" tag="button">搜索美食/菜单/用户</router-link>
             <i class="iconfont icon-ling"></i>
             <i class="iconfont icon-shipin"></i>
             <i class="iconfont icon-ling"></i>

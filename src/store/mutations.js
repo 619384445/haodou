@@ -18,5 +18,9 @@ export default {
      mutMenu(state,parameter){
         state.menu=parameter;
         sessionStorage.setItem("menu",JSON.stringify(state.menu));
+       },
+       mutSerch(state,parameter){
+        state.serch=parameter;
+        console.log(state.serch);
        }
 }
