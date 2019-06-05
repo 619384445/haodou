@@ -1,21 +1,23 @@
 import axios from 'axios'
 import {getIndex} from '@/api'
 export default {
-    async actGetIndex({commit},parameter){
+    async actGetIndex({state,commit},parameter){
+        state.loginFlag=true;
         let data= await getIndex(parameter);
         commit('mutGetIndex',data.data.dataset);
        
       },
-      async actKitchen({commit},parameter){
+      async actKitchen({state,commit},parameter){
+        state.loginFlag=true;
              let data= await getIndex(parameter);
              commit('mutKitchen',data.data.dataset);
            },
     async actSerch({commit},parameter){
              let data= await getIndex(parameter);
              commit('mutSerch',data.data.dataset);
-             console.log(data.data.dataset)
            },
-      actGetFood({commit}){
+      actGetFood({state,commit}){
+        state.loginFlag=true;
         axios({
             method:"get",
             url:"http://localhost:3000/foods"
@@ -28,7 +30,8 @@ export default {
             
         })
     },
-    actGetUsers({commit}){
+    actGetUsers({state,commit}){
+        state.loginFlag=true;
       axios({
           method:"get",
           url:"http://localhost:3000/users"
@@ -41,16 +44,24 @@ export default {
           
       })
   },
-  actMenu({commit}){
+  actShop({commit},parameter){
     axios({
         method:"get",
-        url:"http://localhost:3000/menu"
+        url:"http://localhost:3000/foods/"+parameter
     }).
     then((res)=>{
-        res.data.map((item)=>{ 
-            item.flag = true;
-        })
-        commit("mutMenu",res.data);
+ 
+        commit("mutShop",res.data);
     })
-}
+},
+        actMenu({commit}){
+            axios({
+                method:"get",
+                url:"http://localhost:3000/menu"
+            }).
+            then((res)=>{
+                commit("mutMenu",res.data);
+            })
+        }
+      
 }

@@ -8,7 +8,7 @@
                   <router-link tag="li" to="/newproduct" >新味道</router-link>
                   <router-link tag="li" to="/menu" >菜单</router-link>
                   <router-link tag="li" to="/kitchen" >厨房宝典</router-link>
-                  
+                  <li v-for="item in msg">{{item}}</li>
                 </ul>
             </BScroll>
             
@@ -18,8 +18,10 @@
 
 <script>
 export default {
-    created(){
-       
+    data(){
+       return{
+         msg:["川辣撩人","东北菜","羊肉","降三高","低卡瘦身餐","早餐"]
+       }
     },
     name:"top",
     methods:{

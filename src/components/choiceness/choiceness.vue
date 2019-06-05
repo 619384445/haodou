@@ -92,10 +92,10 @@ components:{
      .navList{
        position: absolute;
        width:max-content;
+      
      }
-     .navList div{
-       margin-right: 0.1rem;
-       
+     .navList :not(:last-child){
+       margin-right:0.05rem;
      }
      .navList img,.navList div{
       float: left;

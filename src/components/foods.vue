@@ -2,7 +2,7 @@
 <template>
     <div class="recommend">
               <h1>为你推荐</h1>
-                  <div class="recoBox" v-for="item in indexFood">
+                  <router-link tag="div" :to="'/commodity/'+index" class="recoBox" v-for="(item,index) in indexFood">
                       <div class="foodBox">
                         <img :src="item.img"  alt="" class="foodImg">
                         <div class="foodMsg">
@@ -20,7 +20,7 @@
                             
                            <span class="food"></span>
                       </p>
-                  </div>
+                  </router-link>
             </div>
 </template>
 

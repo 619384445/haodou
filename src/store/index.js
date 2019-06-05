@@ -13,9 +13,9 @@ export default new Vuex.Store({
       users:JSON.parse(sessionStorage.getItem("users"))||[],
       kitchen:JSON.parse(sessionStorage.getItem("kitchen"))||[],
       menu:JSON.parse(sessionStorage.getItem("menu"))||[],
-      serch:null
-
-      
+      serch:null,
+      loginFlag:true,
+      shop:[] 
   },
   mutations,
   actions

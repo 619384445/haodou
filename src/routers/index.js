@@ -57,6 +57,14 @@ export default new Router({
       meta:{
         sFlag:true
       }
+    },
+    {
+      path: '/commodity/:id',
+      name: 'commodity',
+      component:resolve => require(['@/components/commodity/commodity'],resolve),
+      meta:{
+        sFlag:true
+      }
     }
 ]
 })

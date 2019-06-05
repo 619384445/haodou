@@ -12,8 +12,22 @@ export default {
         this.scroll= new BScroll(this.$refs.Bscroll,{
             scrollX:true,
             scrollY:true,
-            click: true
+            click: true,
+            probeType:2
         });
+    },
+    methods:{
+        handUp(cb){
+            this.scroll.on("scroll",(pro)=>{
+                if(pro.y>30)
+                   cb();
+            })
+        },
+         handDown(cb){
+            this.scroll.on("touchEnd",(pro)=>{
+                   cb();
+            })
+        }
     }
 }
 

@@ -9,9 +9,7 @@
 
 <script>
 export default {
-    created(){
-       
-    },
+
     name:"seach",
     methods:{
         

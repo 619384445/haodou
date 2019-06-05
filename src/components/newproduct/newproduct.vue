@@ -23,6 +23,7 @@ export default {
    activated(){
       this.actFood();
       this.actUsers();
+      console.log(this.users)
    },
 
 components:{
