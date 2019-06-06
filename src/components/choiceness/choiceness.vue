@@ -2,10 +2,10 @@
     <div class="choiceness">
         <showImg :indexShow="indexShow[0].dataset"></showImg>
            <div class="nav">
-             <div v-for="item in indexShow[1].dataset">
+             <router-link tag="div" v-for="item in indexShow[1].dataset" to="/menuList">
                 <img :src="item.img">
                 <p>{{item.name}}</p>
-             </div>
+             </router-link>
           </div>
 
             <div class="navList-wrap">

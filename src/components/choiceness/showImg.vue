@@ -30,6 +30,7 @@ export default {
     overflow: hidden;
     height: 1rem;
     width: 100%;
+     margin-top:0.05rem;
 }
 .showImg .ul{
  position:absolute;
@@ -39,7 +40,7 @@ export default {
 }
 
 .showImg img{
-        margin-top:0.05rem;
+       
         width: 100%;
         height: 1rem;
         border-radius: 0.05rem;

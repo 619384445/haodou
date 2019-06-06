@@ -65,6 +65,22 @@ export default new Router({
       meta:{
         sFlag:true
       }
+    },
+    {
+      path: '/menuList',
+      name: 'menuList',
+      component:resolve => require(['@/components/menuList/menuList'],resolve),
+      meta:{
+        sFlag:true
+      }
+    },
+    {
+      path: '/result',
+      name: 'result',
+      component:resolve => require(['@/components/serch/result'],resolve),
+      meta:{
+        sFlag:false
+      }
     }
 ]
 })

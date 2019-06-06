@@ -5,20 +5,23 @@
                 <i class="iconfont icon-fangdajing"></i>
                 <input type="text" placeholder="搜索美食/菜单/用户" :value="tVla" @keyup="serch($event)">
             </div>
-             <v-touch v-on:tap="blck" tag="span">
+             <v-touch v-on:tap="blck" tag="span" v-if="!flag">
               返回
+             </v-touch>
+              <v-touch v-on:tap="push" tag="span" v-else>
+              搜索
              </v-touch>
         </div>
         <div id="serchlist" v-if="flag">
                     <p>搜索“<span>{{tVla}}</span>”</p>
                     <ul>
-                        <li v-for="item in sData">
+                        <v-touch v-on:tap="push" tag="li" v-for="item in sData">
                             <span>
                                 <i class="iconfont icon-fangdajing"></i>
                                 {{item.query}}
                             </span>
                                 <i class="iconfont icon-changjiantou-zuo"></i>
-                        </li>
+                        </v-touch>
                        
                     </ul>
             </div> 
@@ -33,13 +36,51 @@ export default {
         return{
             tVla:"",
             flag:false,
-            timr:null
+            timr:null,
+            datas:null
         }
     },
     name:"seach2",
     methods:{
       blck(){
-          this. $router.back(-1);
+          this.$router.back(-1);
+      },
+       push(){
+           var index=0;
+           switch(this.tVla) {
+                        case "鱼":
+                            index=0;
+                            break;
+                        case "红":
+                            index=1;
+                            break;
+                        case "面":
+                            index=2;
+                            break; 
+                    } 
+                   var arr=[
+                       {"current_time":1559810077,"sign":"5ef51a3fb2e7ae79bb29ae6d1f3336d3"},
+                       {"current_time":1559807132,"sign":"88fabea0a4f27ff72aea2aa3f3960e14"},
+                       {"current_time":1559810172,"sign":"206f802ee541205d1a4ddf2a3f581bed"}
+                   ]
+          this.actSerch2({
+                moduleId: "5bfe119b885fb322122eda32",
+                numbers: [],
+                keyword: this.tVla,
+                type: 2,
+                subType: 0,
+                _HOP_: {"version":"1.0.0","action":"api.searchs.new.search","secret_id":"5722f877e4b0d4512e3fd872","current_time":arr[index].current_time,"sign":arr[index].sign},
+                from: "mvue",
+                adcode: 100000,
+                appid: 3,
+                uid: 138453460,
+                uuid: "051B99E1CD3DC1CCDFB1559043172157",
+                hduid: 138453460,
+                vc: 170,
+                vn: "1.0.0"
+          });
+          this.flag=false;
+          this.$router.push({path: '/result'});
       },
       serch(e){
           var i=0;
@@ -53,9 +94,26 @@ export default {
             clearTimeout(this.timr);
           }else{
                 this.timr=setTimeout(function(){
+                    var index=0;
+                    switch(e.path[0].value) {
+                        case "鱼":
+                            index=1;
+                            break;
+                        case "红":
+                            index=0;
+                            break;
+                        case "面":
+                            index=2;
+                            break; 
+                    } 
+                   var arr=[
+                       {"current_time":1559618035,"sign":"528f0e1c3029bc92af5e01a17baea30b"},
+                       {"current_time":1559803844,"sign":"f9e7a858a76ccc39aca4f8daa2228342"},
+                       {"current_time":1559804333,"sign":"70f5f6059a0f6dd51153d8a85b3e59d2"}
+                   ] 
                     this.actSerch({
                             keyword: this.tVla=e.path[0].value,
-                            _HOP_: {"version":"1.0.0","action":"api.searchs.new.suggest","secret_id":"5722f877e4b0d4512e3fd872","current_time":1559618035,"sign":"528f0e1c3029bc92af5e01a17baea30b"},
+                            _HOP_: {"version":"1.0.0","action":"api.searchs.new.suggest","secret_id":"5722f877e4b0d4512e3fd872","current_time":arr[index].current_time,"sign":arr[index].sign},
                             from: "mvue",
                             adcode: 100000,
                             appid: 3,
@@ -65,7 +123,6 @@ export default {
                             vc: 170,
                             vn: "1.0.0"});
                             this.timr=null;
-                            console.log(this.sData)
                 }.bind(this),500);
           }
         
@@ -73,12 +130,14 @@ export default {
       },
         ...Vuex.mapActions({
          actSerch:"actSerch",
+         actSerch2:"actSeach2",
       })
 
     },
     computed:{
           ...Vuex.mapState({
             sData:state=>state.serch,
+            Seach2:state=>state.Seach2
     })
     }
    

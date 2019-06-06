@@ -16,6 +16,20 @@ export default {
              let data= await getIndex(parameter);
              commit('mutSerch',data.data.dataset);
            },
+    async actMenuList({commit},parameter){
+             let data= await getIndex(parameter);
+             commit('mutMenuList',data.data);
+           },
+    async actMenuSeach({commit},parameter){
+             let data= await getIndex(parameter);
+             commit('mutMenuSeach',data.data.dataset);
+           },
+    async actSeach2({state,commit},parameter){
+             state.loginFlag=true;
+             let data= await getIndex(parameter);
+             commit('mutSeach2',data.data.dataset);
+             console.log(data.data.dataset);
+           },
       actGetFood({state,commit}){
         state.loginFlag=true;
         axios({

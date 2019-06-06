@@ -29,5 +29,15 @@ export default {
        },
        mutShop(state,parameter){
         state.shop=parameter;
+       },
+       mutMenuList(state,parameter){
+        state.menuList=parameter;
+       },
+       mutMenuSeach(state,parameter){
+        state.menuSeach=parameter;
+       },
+       mutSeach2(state,parameter){
+        state.Seach2=parameter;
+        state.loginFlag=false;
        }
 }

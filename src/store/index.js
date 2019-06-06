@@ -15,7 +15,10 @@ export default new Vuex.Store({
       menu:JSON.parse(sessionStorage.getItem("menu"))||[],
       serch:null,
       loginFlag:true,
-      shop:[] 
+      shop:[],
+      menuList:[],
+      menuSeach:[],
+      Seach2:[]
   },
   mutations,
   actions

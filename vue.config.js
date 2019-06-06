@@ -1,4 +1,6 @@
 module.exports = {
+    baseUrl:"./",
+    outputDir:"dist",
     devServer:{
         proxy:{
              "/hop":{

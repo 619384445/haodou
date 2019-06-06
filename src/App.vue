@@ -91,6 +91,7 @@ html{
 }
 body{
   height: 100%;
+  background:#f5f5f5;
 }
 #app{
   height: 100%;
@@ -98,6 +99,7 @@ body{
 .main{
   padding:0 0.1rem;
   padding-top:0.3rem;
+  
 }
 .flush{
   text-align: center;

@@ -46,8 +46,8 @@ components:{
 
 <style scoped>
       .users{
-       overflow-y: hidden;
        margin-top:.2rem;
+       overflow: hidden;
      }
    
      .users ul {
